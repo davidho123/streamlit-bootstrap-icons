@@ -25,8 +25,12 @@ def main():
     # 添加文本输入框
     search_text = row_input[0].text_input('输入关键词以过滤图标:', key='search')
     # 添加搜索按钮
+    row_input[1].text(" ")
+    row_input[1].text(" ")
     search_button = row_input[1].button('搜索')
     # 添加清空按钮
+    row_input[2].text(" ")
+    row_input[2].text(" ")
     clear_button = row_input[2].button('清空',on_click = clear_search)
     # 读取SVG文件夹内的所有文件
     svg_files = [f for f in os.listdir(svg_folder_path) if f.endswith('.svg')]
