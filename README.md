@@ -1,3 +1,3 @@
 # streamlit-bootstrap-icons-search
 search-bootstrap-icons
-！[Screenshot](Screenshot.png)
+！[Screenshot](img/Screenshot.png)
