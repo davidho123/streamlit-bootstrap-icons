@@ -1,2 +1,2 @@
-# streamlit-bootstrap-icons
+# streamlit-bootstrap-icons-search
 search-bootstrap-icons
