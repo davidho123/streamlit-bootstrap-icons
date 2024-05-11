@@ -1,13 +1,18 @@
 # streamlit-bootstrap-icons-search
 search-bootstrap-icons
-## 1、需要用到的库cairosvg
+## 一、演示地址
+https://bootstrap-icons-search.streamlit.app/
+## 二、图标显示方案
+#### 1、默认是以 svg 显示，加载会稍慢
+#### 2、可以改用 png 显示，加载会快一些
+（1）如果用png显示，需要修改代码，导入 cairosvg、io库取消注释，同时将函数svg_to_image，取消注释，53行、54行取消注释
+（2）需要用到的库cairosvg
 ```python
 pip install cairosvg
 ```
-cairosvg 库将svg改为png。
-这个库可以不用，直接用streamlit的image组件加载svg，但页面加载会慢一些。
 
-## 2、全部图标
+## 三、运行图
+#### 全部图标
 ![1](img/1.png)
-## 3、搜索后图标
+#### 搜索后图标
 ![2](img/2.png)
