@@ -1,17 +1,17 @@
 import streamlit as st
 import os
-from cairosvg import svg2png
-import io
+# from cairosvg import svg2png
+# import io
 
 # 设定SVG文件夹路径
 svg_folder_path = 'bootstrap-icons/icons'
 
-def svg_to_image(svg_file_path):
-    """将SVG文件转换为PNG图像"""
-    png_image = io.BytesIO()
-    svg2png(bytestring=open(svg_file_path, 'rb').read(), write_to=png_image)
-    png_image.seek(0)
-    return png_image
+# def svg_to_image(svg_file_path):
+#     """将SVG文件转换为PNG图像"""
+#     png_image = io.BytesIO()
+#     svg2png(bytestring=open(svg_file_path, 'rb').read(), write_to=png_image)
+#     png_image.seek(0)
+#     return png_image
 
 # 清空搜索框内容的函数
 def clear_search():
@@ -50,8 +50,9 @@ def main():
         
         # 使用cairosvg将SVG转换为PNG
         img_path = os.path.join(svg_folder_path, file)
-        img_data = svg_to_image(img_path)
-        col[i % num_columns].image(img_data, width=20)  # 显示图片
+        # img_data = svg_to_image(img_path)
+        # col[i % num_columns].image(img_data, width=20)  # 显示 png 图片
+        col[i % num_columns].image(img_path, width=20)  # 直接显示svg 图片
         
         # 去掉SVG后缀并显示文件名
         base_name = os.path.splitext(file)[0]
